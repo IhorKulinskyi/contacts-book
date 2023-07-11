@@ -1,13 +1,13 @@
 import { List, ListItem, ListBtn } from './ContactsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
-import { deleteContact } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import { useEffect } from 'react';
 import {
   selectError,
   selectFilteredContacts,
   selectIsLoading,
-} from 'redux/selectors';
+} from 'redux/contacts/selectors';
 
 const ContactsList = () => {
   const isLoading = useSelector(selectIsLoading);
