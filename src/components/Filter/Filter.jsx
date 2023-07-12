@@ -1,5 +1,5 @@
 import { Wrapper, FilterInput } from './Filter.styled';
-import { setFilterValue } from 'redux/filterSlice';
+import { setFilterValue } from 'redux/filter/filterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from "redux/contacts/selectors";
 

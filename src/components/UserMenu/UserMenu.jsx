@@ -5,24 +5,27 @@ import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import {
-  selectIsLoggenIn,
+  selectIsLoggedIn,
   selectToken,
   selectUser,
 } from 'redux/auth/selectors';
 import { logOut } from 'redux/auth/operations';
+import { useNavigate } from 'react-router-dom';
 
 const UserMenu = () => {
   const user = useSelector(selectUser);
-  const isLoggendIn = useSelector(selectIsLoggenIn);
+  const isLoggendIn = useSelector(selectIsLoggedIn);
   const token = useSelector(selectToken);
 
   const dispatch = useDispatch();
 
-  const handleChange = event => {
+  const navigate = useNavigate();
+
+  const handleChange = () => {
     if (isLoggendIn) {
       dispatch(logOut(token));
     } else {
-      console.log('logIn');
+      navigate('/login');
     }
   };
   return (

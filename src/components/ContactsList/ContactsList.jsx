@@ -26,10 +26,10 @@ const ContactsList = () => {
     <List>
       {isLoading && <div>Is loading...</div>}
       {error && <div>{error}</div>}
-      {contacts.map(({ id, name, phone }) => {
+      {contacts.map(({ id, name, number }) => {
         return (
           <ListItem key={id}>
-            {name}: {phone}
+            {name}: {number}
             <ListBtn type="button" id={id} onClick={handleDelete}>
               Delete
             </ListBtn>
