@@ -3,7 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-// import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -23,20 +22,11 @@ export default function Register() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    // {
-    //   name: data.get('firstName'),
-    //   email: data.get('email'),
-    //   password: data.get('password'),
-    // }
-
     const userData = {
       name: data.get('firstName'),
       email: data.get('email'),
       password: data.get('password'),
     };
-
-    console.log(userData);
-    console.log(dispatch(register(userData)))
 
     dispatch(register(userData));
   };
@@ -109,11 +99,7 @@ export default function Register() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <NavLink to="/login">
-                  {/* <Link href="#" variant="body2"> */}
-                  Already have an account? Sign in
-                  {/* </Link> */}
-                </NavLink>
+                <NavLink to="/login">Already have an account? Sign in</NavLink>
               </Grid>
             </Grid>
           </Box>

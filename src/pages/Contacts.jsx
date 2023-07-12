@@ -1,16 +1,20 @@
 import Form from 'components/Form';
 import Filter from 'components/Filter';
 import ContactsList from 'components/ContactsList';
+import Wrapper from 'components/Wrapper';
 
 const Contacts = () => {
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <Form />
+    <Wrapper>
+      <Wrapper>
+        <h1>Phonebook</h1>
+        <Form />
+      </Wrapper>
+
       <h2>Contacts</h2>
       <Filter />
       <ContactsList />
-    </div>
+    </Wrapper>
   );
 };
 
