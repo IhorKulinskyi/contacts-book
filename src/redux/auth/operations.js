@@ -45,14 +45,3 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(e.message);
   }
 });
-
-// export const fetchUser = createAsyncThunk(
-//     'user/fetch',
-//     async (_,thunkAPI) => {
-//         try {
-
-//         } catch (error) {
-
-//         }
-//     }
-// )
